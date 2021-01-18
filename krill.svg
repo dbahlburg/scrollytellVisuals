@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="210mm"
-   height="210mm"
-   viewBox="0 0 210 210"
+   width="220mm"
+   height="220mm"
+   viewBox="0 0 220 220"
    version="1.1"
    id="svg3925"
    inkscape:version="0.92.2 5c3e80d, 2017-08-06"
@@ -44,7 +44,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -52,13 +52,13 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-87)">
+     transform="translate(0,-77)">
     <g
        transform="matrix(1.81,-1.3811727e-8,1.3811727e-8,1.81,-134.3078,82.860113)"
        id="g4478">
       <g
          id="g4548"
-         transform="matrix(-2.1022537,-0.27845482,-0.27845482,2.1022537,329.06085,34.984497)"
+         transform="matrix(-2.1022537,-0.27845482,-0.27845482,2.1022537,328.47613,29.722071)"
          style="fill:#f5f5f5;fill-opacity:1;stroke:#f5f5f5;stroke-opacity:1">
         <path
            sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccsscccccccccccccccccc"
@@ -73,11 +73,11 @@
            style="fill:#f5f5f5;fill-opacity:1;stroke:#f5f5f5;stroke-width:0.27243778px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       </g>
       <circle
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#f5f5f5;stroke-width:1.93370166;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#f5f5f5;stroke-width:1.38121547;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="path12056"
-         cx="132.24358"
-         cy="60.415134"
-         r="54.399529" />
+         cx="135.43327"
+         cy="57.810181"
+         r="58.897949" />
       <g
          aria-label="KRILL"
          transform="matrix(0.24836769,-0.00186956,0.00186956,0.24836769,-85.834426,46.742017)"
