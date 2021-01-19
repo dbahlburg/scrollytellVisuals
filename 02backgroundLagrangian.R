@@ -95,15 +95,17 @@ hexCenters <- hexagons %>%
   group_by(group) %>% 
   dplyr::summarise(latHex = mean(lat),
                    longHex = mean(long)) %>% 
-  mutate(value =  extract(seaIce, 
-                          tibble(long = longHex, lat = latHex))) %>% 
-  dplyr::select(-latHex, -longHex) 
+  rowwise() %>% 
+  mutate(nearestPointInd = which.min((longHex - seaiceDfLag$long)^2 +
+                                       (latHex - seaiceDfLag$lat)^2 ),
+         value = seaiceDfLag$value[nearestPointInd]) %>% 
+  dplyr::select(-latHex, -longHex, -nearestPointInd) 
 
 hexagonsPlot <- hexagons %>% 
   left_join(hexCenters, by = c('group'))  %>% 
   mutate(value = ifelse(is.na(value), 1, value)) 
 
-ggplot(hexagonsPlot) +
+pp <- ggplot(hexagonsPlot) +
   geom_polygon(aes(x = long, y = lat, group = group, alpha = value),
                fill = '#ff5500', size = 0.25, colour = '#ff5500') +
   scale_alpha_continuous(range = c(0.2,0.4)) +
@@ -112,7 +114,6 @@ ggplot(hexagonsPlot) +
                aes(x = long, y = lat, group = group),
                fill = '#1f1f1f', colour = '#1f1f1f',
                size = 0.1)+
-  #scale_y_continuous(limits = c(-90,30)) +
   theme(panel.background = element_rect(fill = '#1f1f1f'),
         plot.background = element_rect(fill = '#1f1f1f'),
         panel.grid = element_blank(),
@@ -121,4 +122,4 @@ ggplot(hexagonsPlot) +
         axis.ticks = element_blank(),
         legend.position = 'none')
 
-ggsave('~/Git/scrollytellVisuals/backgroundLag.png', width = 35, height = 12)
+ggsave('~/Git/scrollytellVisuals/backgroundLag.png', pp, width = 35, height = 12)
